@@ -41,15 +41,18 @@ unifind_smart/
 ## 🚀 Quick Setup Instructions
 
 ### 1. Database Setup
+
 1. Start MySQL/MariaDB server (e.g. XAMPP / WAMP / Laragon).
 2. Create or import the database using `schema.sql`:
    ```bash
    mysql -u root -p < schema.sql
    ```
-   *The script automatically creates database `unifind_smart` and populates seed users & items.*
+   _The script automatically creates database `unifind_smart` and populates seed users & items._
 
 ### 2. Configure Database Connection (Optional)
+
 If your MySQL credentials differ from default (`localhost`, `root`, no password), update constants in `config.php`:
+
 ```php
 define('DB_HOST', '127.0.0.1');
 define('DB_USER', 'root');
@@ -58,21 +61,24 @@ define('DB_NAME', 'unifind_smart');
 ```
 
 ### 3. Run Application
+
 Run PHP built-in web server from the project root:
+
 ```bash
 php -S localhost:8000
 ```
+
 Open **[http://localhost:8000/index.php](http://localhost:8000/index.php)** in your web browser.
 
 ---
 
 ## 🔑 Default Accounts
 
-| Role | Email | Password | Administrative Key |
-| :--- | :--- | :--- | :--- |
-| **Student** | `student@unifind.edu` | `Password123#` | N/A |
-| **Admin** | `admin@unifind.edu` | `Password123#` | `admin123` |
-| **Security** | `security@unifind.edu` | `Password123#` | `admin123` |
+| Role         | Email                  | Password       | Administrative Key |
+| :----------- | :--------------------- | :------------- | :----------------- |
+| **Student**  | `student@unifind.edu`  | `Password123#` | N/A                |
+| **Admin**    | `admin@unifind.edu`    | `Password123#` | `admin123`         |
+| **Security** | `security@unifind.edu` | `Password123#` | `admin123`         |
 
 ---
 
@@ -83,3 +89,4 @@ Open **[http://localhost:8000/index.php](http://localhost:8000/index.php)** in y
 - **Verification Queue**: Found items require Admin approval before appearing publicly on the student community feed.
 - **Chart.js Analytics**: Visual 30-day line trends and category distribution charts.
 - **CSV Records Exporter**: Instant download of official campus records.
+  Git workflow tested successfully.
